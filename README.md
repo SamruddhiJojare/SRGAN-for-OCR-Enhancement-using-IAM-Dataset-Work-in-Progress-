@@ -109,8 +109,8 @@ Model checkpoints are saved every 10 epochs as `srgan_gen_epoch_<N>.h5`. Trainin
 ```
 .
 ├── srgan_ocr_enhancement.ipynb   # Main training notebook
-├── srgan_gen_epoch_10.h5         # Generator checkpoint (epoch 10)
-├── srgan_gen_epoch_20.h5         # Generator checkpoint (epoch 20)
+├── srgan_gen_epoch_10.png            
+├── srgan_gen_epoch_20.png           
 └── README.md
 ```
 
@@ -121,22 +121,21 @@ Model checkpoints are saved every 10 epochs as `srgan_gen_epoch_<N>.h5`. Trainin
 - ✅ Dataset extraction and preprocessing pipeline
 - ✅ TF Data pipeline with batching, shuffling, and prefetching
 - ✅ Generator architecture (residual blocks + PixelShuffle upsampling)
-- ✅ Discriminator architecture (multi-scale CNN)
+- ✅ Discriminator architecture
 - ✅ VGG19-based perceptual loss
 - ✅ Custom GradientTape training loop
 - ✅ Training visualization per epoch
-- ✅ Initial training completed (27/50 epochs)
+- ✅ Initial training completed (27 epochs)
 - ✅ Sample super-resolution outputs generated
-- 🔄 Training ongoing — full 50-epoch run in progress
+- 🔄 Training ongoing — full epoch run in progress
 
 ---
 
 ## Planned Improvements
 
-- Complete full 50-epoch training run
+- Complete full epochs training run
 - Quantitative evaluation using **PSNR** and **SSIM** metrics
 - **OCR benchmarking** with Tesseract OCR on SR vs. bicubic-upscaled outputs
-- Experiment with **ESRGAN** (Enhanced SRGAN with Residual-in-Residual Dense Blocks)
 - Incorporate **edge-aware enhancement** techniques suited for text
 - Hyperparameter tuning (learning rate scheduling, more residual blocks)
 - Evaluation on degraded/noisy real-world handwriting samples
@@ -152,12 +151,6 @@ opencv-python
 pillow
 matplotlib
 scikit-learn
-```
-
-Install with:
-
-```bash
-pip install tensorflow numpy opencv-python pillow matplotlib scikit-learn
 ```
 
 ---
